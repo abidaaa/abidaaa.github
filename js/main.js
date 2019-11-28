@@ -7,7 +7,7 @@ var popupButton = document.getElementById('popup-button');
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(function (stream) {
-      audio.volume = 0;
+      audio.volume = 0.2;
       audio.play();
       audio.loop = true;
       video.srcObject = stream;
