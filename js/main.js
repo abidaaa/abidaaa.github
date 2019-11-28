@@ -17,6 +17,10 @@ if (navigator.mediaDevices.getUserMedia) {
 document.onkeypress = function (e) {
   if (e.charCode == 102 || e.charCode == 70)
     wrapper.requestFullscreen();
+  else if ((e.charCode == 109 || e.charCode == 77) && audio.muted == false)
+    audio.muted = true;
+  else if ((e.charCode == 109 || e.charCode == 77) && audio.muted == true)
+    audio.muted = false;
 };
 
 /*video.ondblclick = function ()
@@ -24,4 +28,5 @@ document.onkeypress = function (e) {
   var x = event.clientX;     // Get the horizontal coordinate
   var y = event.clientY;     // Get the vertical coordinate
   var coor = "X coords: " + x + ", Y coords: " + y;
+  console.log(coor);
 }*/
