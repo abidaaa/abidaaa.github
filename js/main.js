@@ -9,6 +9,7 @@ if (navigator.mediaDevices.getUserMedia) {
     .then(function (stream) {
       audio.volume = 0.2;
       audio.play();
+      audio.muted = false;
       audio.loop = true;
       video.srcObject = stream;
     })
